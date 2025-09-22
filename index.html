@@ -1,95 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portofolio Website</title>
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- ICONS -->
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Portfolio Rizwar Adi Nugroho - Data Analyst</title>
+    <link rel="stylesheet" href="\css\style.css">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="sticky">
-        <span>RIZWAR ADI NUGROHO.</span>
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <ul class="navlist">
-            <li><a href="#home" class="aktif">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portofolio">Portofolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Rizwar Adi Nugroho</a>
+            <ul class="nav-links">
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
     </header>
-    <!-- END HEADER -->
-<div id="konten">
-    <div id="isikonten">
-        <!-- HOME PROFILE -->
 
-            <section class="home" id="home">
-                <div class="home-text">
-                    <h3>Hello, I'm</h3>
-                    <h1>Rizwar</h1>
-                    <h5>Saya adalah Mahasiswa yang sedang menempuh pendidikan perguruan tinggi di STMIK IKMI Cirebon semester 3<span> asal Kuningan</span></h5>
-                    <p></p>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Halo, saya Rizwar Adi Nugroho</h1>
+                <p class="subtitle">Fresh Graduate Data Analyst | Mengubah Data Menjadi Cerita</p>
+                <p class="description">
+                    Saya bersemangat dalam menemukan wawasan tersembunyi dari data untuk mendukung pengambilan keputusan bisnis yang strategis.
+                </p>
+                <div class="hero-buttons ">
+                    <a href="#projects" class="btn btn-primary">Lihat Proyek Saya</a>
+                    <a href="/path-to-your-cv.pdf" target="_blank" class="btn btn-secondary">Unduh CV</a>
                 </div>
-                <div class="foto-saya">
-                    <img src="./img/Rizwar.png">
-                </div>
-            </section>
-        
-        <!-- END HOME PROFILE -->
+            </div>
+        </section>
 
-        <!-- Contact -->
-            <section class="contact" id="contact">
-                <div class="container">
-                    <div class="center">
-                        <h3>Let's talk about everything</h3>
+        <!-- About Section -->
+        <section id="about" class="container">
+            <h2>Tentang Saya</h2>
+            <p>
+                Sebagai seorang fresh graduate dengan minat besar pada data, saya memiliki dasar yang kuat dalam statistika, pemodelan data, dan visualisasi. Saya sangat antusias untuk menerapkan kemampuan analisis saya untuk memecahkan masalah nyata. Saya adalah pembelajar yang cepat dan selalu ingin tahu tentang teknologi dan metode baru di dunia data.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="container">
+            <h2>Skills Teknis</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Bahasa & Database</h3>
+                    <p>Python (Pandas, NumPy, Scikit-learn), R, SQL (PostgreSQL, MySQL)</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Visualisasi Data</h3>
+                    <p>Tableau, Power BI, Matplotlib, Seaborn</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Tools & Lainnya</h3>
+                    <p>Jupyter Notebook, Git & GitHub, Microsoft Excel, Google Sheets</p>
+                </div>
+                 <div class="skill-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Statistika & Machine Learning</h3>
+                    <p>Statistika Deskriptif & Inferensial, Regresi, Klasifikasi, Clustering</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container">
+            <h2>Proyek Portofolio</h2>
+            <div class="projects-grid">
+                <!-- Proyek 1 -->
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250.png?text=Gambar+Proyek+1" alt="Gambar Proyek 1">
+                    <h3>Analisis Sentimen Media Sosial</h3>
+                    <p>Menganalisis sentimen publik terhadap suatu produk berdasarkan data dari Twitter menggunakan Python dan NLTK.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Tableau</span>
                     </div>
-
-                    <div class="action">
-                        <form>
-                            <input type="text" name="Nama" placeholder="Your Name" required>
-                            <input type="email" name="Email" placeholder="Enter Your Email" required>
-                            <textarea name="Pesan" id="pesan" rows="6" placeholder="Your Message" required></textarea><br>
-                            <button type="submit" class="btn">Kirim</button>
-                        </form>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Kode</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
                     </div>
                 </div>
-            </section>
-        
-
-
-        <!-- Footer -->
-            <footer>
-                <div class="social" id="social">
-                    <h2>Contact Me</h2>
+                <!-- Proyek 2 -->
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250.png?text=Gambar+Proyek+2" alt="Gambar Proyek 2">
+                    <h3>Prediksi Churn Pelanggan</h3>
+                    <p>Membangun model machine learning untuk memprediksi pelanggan yang berpotensi berhenti berlangganan (churn).</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>SQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Kode</a>
+                    </div>
                 </div>
-                <div class="social">
-                    <a href="#"><i class="bx bxl-instagram"></i></a>
-                    <a href="#"><i class="bx bxl-linkedin"></i></a>
-                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
-                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                <!-- Proyek 3 -->
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250.png?text=Gambar+Proyek+3" alt="Gambar Proyek 3">
+                    <h3>Dashboard Penjualan Interaktif</h3>
+                    <p>Membuat dashboard di Tableau untuk memvisualisasikan performa penjualan bulanan dan KPI utama perusahaan.</p>
+                    <div class="project-tags">
+                        <span>Tableau</span>
+                        <span>SQL</span>
+                        <span>Data Cleaning</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Lihat Dashboard</a>
+                    </div>
                 </div>
+            </div>
+        </section>
+    </main>
 
-                <ul>
-                    <p class="copyright">
-                    Rizwar Adi Nugroho @ 2022
-                    </p>
-                </ul>
-            </footer>
-        <!-- Akhir Footer -->
-    </div>
-</div>
+    <!-- Contact Section -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Hubungi Saya</h2>
+            <p>Saya terbuka untuk kesempatan kerja dan kolaborasi. Silakan hubungi saya melalui:</p>
+            <div class="contact-links">
+                <a href="mailto:rizwarnugroho@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> Gmail
+                </a>
+                <a href="https://www.linkedin.com/in/rizwar-adi-nugroho-675487271/" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/Rizwar10" target="_blank" class="contact-item">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <p class="copyright">&copy; 2024 oleh Rizwar Adi Nugroho. Dibuat dengan penuh semangat.</p>
+        </div>
+    </footer>
 
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-	<!--------Link to js---->
-	<script type="text/javascript" src="js/script.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="\js\script.js"></script>
 </body>
 </html>

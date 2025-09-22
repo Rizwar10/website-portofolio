@@ -1,32 +1,29 @@
-const header = document.querySelector("header");
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-window.addEventListener ("scroll", function() {
-	header.classList.toggle ("sticky", window.scrollY > 0);
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        // Ganti ikon bars menjadi 'X' (times) saat menu aktif
+        const icon = menuToggle.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Tutup menu saat link di-klik (berguna untuk navigasi di halaman yang sama)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
 });
-
-let menu = document.querySelector('#menu-icon');
-let navlist = document.querySelector('.navlist');
-let social = document.querySelector('#social');
-
-menu.onclick = () => {
-	menu.classList.toggle('bx-x');
-	navlist.classList.toggle('active');
-};
-
-window.onscroll = () => {
-	menu.classList.remove('bx-x');
-	navlist.classList.remove('active');
-};
-
-const sr = ScrollReveal ({
-	distance: '45px',
-	duration: 2700,
-	reset: true
-})
-
-sr.reveal('.home-text',{delay:350, origin:'left'})
-sr.reveal('.foto-saya',{delay:350, origin:'right'})
-
-sr.reveal('.social,.contact',{delay:200, origin:'bottom'})
-
-
